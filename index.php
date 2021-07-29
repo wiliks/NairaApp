@@ -10,10 +10,13 @@
     $result = $connection->query($sql);
     $row=mysqli_fetch_array($query);
 
-    $ID =$_POST["ID"];
+    
 
     if (isset($_POST["submit"])) {
       // Add task to DB
+      
+      $ID =$_POST["ID"];
+      
       //$sql2 = "SELECT EXISTS(SELECT * from package WHERE ID=$ID)";
       $sql2 = "SELECT * from package WHERE ID=$ID";
   
